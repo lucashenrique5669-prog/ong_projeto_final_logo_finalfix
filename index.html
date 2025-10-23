@@ -10,9 +10,9 @@
 <body>
 <div class="container">
   <header class="site-header">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Logo da ONG/Projeto">
-      <strong>ONG/Projeto</strong>
+    <div class="logo-container">
+      <img src="assets/img/logo_ong.png" alt="Logo da ONG" class="logo">
+      <strong class="logo-text">ONG/Projeto</strong>
     </div>
     <nav class="primary" aria-label="Menu principal">
       <ul>
@@ -56,3 +56,18 @@
 <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre a logo e o texto */
+}
+
+.logo {
+  height: 60px; /* ajuste o tamanho conforme o visual */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #0044cc;
+}
