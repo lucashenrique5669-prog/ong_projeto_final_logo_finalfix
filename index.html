@@ -11,7 +11,7 @@
 <div class="container">
   <header class="site-header">
     <div class="logo-container">
-      <img src="assets/images/logo_ong.jpeg" alt="Logo da ONG" class="logo_ong">
+      <img src="assets/images/logo_ong.jpeg" alt="Logo da ONG" class="logo">
       <strong class="logo-text">ONG/Projeto</strong>
     </div>
     <nav class="primary" aria-label="Menu principal">
@@ -56,20 +56,25 @@
 <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>
+/* --- Ajuste definitivo da logo (colar no FINAL de assets/css/styles.css) --- */
 .logo-container {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
 }
 
- .logo {
-  height: auto
-  width: 250px;
-  margin-right: 10px;
-  vertical-align: middle
+.logo {
+  width: 150px !important;   /* ajuste para 120 / 150 / 180 conforme quiser */
+  height: auto !important;
+  max-width: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 12px !important;
 }
 
- .logo-text {
-  font-size: 1.5rem;
+.logo-text {
+  font-size: 1.1rem;
   color: #0044cc;
+  line-height: 1;
 }
+
