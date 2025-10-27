@@ -133,3 +133,9 @@ footer {
   padding: var(--esp-3);
   margin-top: var(--esp-4);
 }
+/* Responsividade */
+@media (max-width: 1200px) { /* notebook */ }
+@media (max-width: 992px) { /* tablet horizontal */ }
+@media (max-width: 768px) { /* tablet vertical */ }
+@media (max-width: 576px) { /* celular grande */ }
+@media (max-width: 400px) { /* celular pequeno */ }
