@@ -46,3 +46,90 @@ footer.site-footer{text-align:center;padding:1rem 0;margin-top:2rem;border-top:1
 @media(min-width:720px){
   .project-list{grid-template-columns:repeat(2,1fr)}
 }
+/* ===========================
+   MENU HAMBURGUER (MOBILE)
+=========================== */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburguer span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--cor-clara);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburguer {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: var(--esp-3) 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: var(--esp-2);
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  /* Animação do botão */
+  .hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburguer.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+input, textarea {
+  padding: var(--esp-2);
+  border: 1px solid var(--cor-neutra);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--cor-secundaria);
+  outline: none;
+}
+
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
+  text-align: center;
+  padding: var(--esp-3);
+  margin-top: var(--esp-4);
+}
