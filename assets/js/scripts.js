@@ -46,10 +46,11 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     });
   }
-});
-const menuBtn = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.primary');
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav.primary ul');
 
-menuBtn.addEventListener('click', () => {
+toggle.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
+</script>
