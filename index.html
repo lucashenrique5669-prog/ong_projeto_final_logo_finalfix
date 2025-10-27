@@ -1,25 +1,26 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ONG/Projeto — Início</title>
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Projeto Solidário</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="logo-container">
-  <header class="site-header">
-    <div class="logo-container">
-      <img src="assets/img/logo_ong.jpeg" alt="Logo da ONG" class="logo">
-      <strong class="logo-text">ONG/Projeto</strong>
-    </div>
-    <nav class="primary" aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
+  <header>
+    <h1>ONG Projeto Solidário</h1>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
+      <div class="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
@@ -27,31 +28,44 @@
     <section class="hero">
       <h1>Transformando boas intenções em ação</h1>
       <p>Conecte-se a causas sociais, apoie projetos e participe como voluntário.</p>
+      <button class="btn">Seja Voluntário</button>
     </section>
 
-    <section class="card">
+    <section id="sobre" class="card">
       <h2>Sobre a ONG/Projeto</h2>
       <p>Promovemos iniciativas sociais voltadas à educação, saúde e desenvolvimento comunitário.</p>
     </section>
 
-    <section class="card">
-      <h2>Projetos em destaque</h2>
+    <section id="projetos" class="card">
+      <h2>Projetos em Destaque</h2>
       <div class="project-list">
         <article class="card">
-          <h3>Projeto Educação Viva</h3>
+          <h3>Projeto Educação Viva <span class="badge">Educação</span></h3>
           <p>Capacitação de jovens em situação de vulnerabilidade social.</p>
         </article>
         <article class="card">
-          <h3>Saúde para Todos</h3>
+          <h3>Saúde para Todos <span class="badge">Saúde</span></h3>
           <p>Atendimentos e campanhas de prevenção em comunidades.</p>
         </article>
       </div>
     </section>
+
+    <section id="contato" class="card">
+      <h2>Contato</h2>
+      <form class="form">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
   </main>
 
-  <footer class="site-footer">© 2025 ONG/Projeto — Todos os direitos reservados.</footer>
-</div>
-<script src="assets/js/scripts.js" defer></script>
+  <footer>
+    <p>&copy; 2025 ONG Projeto Solidário — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
 <head>
