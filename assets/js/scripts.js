@@ -47,3 +47,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 });
+const menuBtn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.primary');
+
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
