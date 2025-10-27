@@ -2,103 +2,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Projeto Solidário</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONG Projeto Solidário – Início</title>
+
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
+  <!-- Cabeçalho -->
   <header class="site-header">
-  <div class="logo-container">
-    <img src="assets/img/logo_ong.jpeg" alt="Logo da ONG" class="logo">
-    <strong class="logo-text">ONG Projeto Solidário</strong>
-  </div>
+    <div class="logo-container">
+      <img src="assets/img/logo_ong.jpeg" alt="Logo da ONG" class="logo" />
+      <strong class="logo-text">ONG Projeto Solidário</strong>
+    </div>
 
-  <!-- Botão do menu (visível só no mobile) -->
-  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <!-- Botão do menu (visível apenas no mobile) -->
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
-  <!-- Menu principal -->
-  <nav class="primary" aria-label="Menu principal">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="projetos.html">Projetos</a></li>
-      <li><a href="cadastro.html">Cadastro</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- Menu principal -->
+    <nav class="primary" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Seção principal -->
   <main>
     <section class="hero">
       <h1>Transformando boas intenções em ação</h1>
       <p>Conecte-se a causas sociais, apoie projetos e participe como voluntário.</p>
-      <button class="menu-toggle">☰</button>
+      <button class="btn-primary">Seja Voluntário</button>
     </section>
 
-    <section id="sobre" class="card">
+    <section class="about">
       <h2>Sobre a ONG/Projeto</h2>
       <p>Promovemos iniciativas sociais voltadas à educação, saúde e desenvolvimento comunitário.</p>
     </section>
 
-    <section id="projetos" class="card">
+    <section class="projects">
       <h2>Projetos em Destaque</h2>
       <div class="project-list">
-        <article class="card">
-          <h3>Projeto Educação Viva <span class="badge">Educação</span></h3>
+        <div class="card">
+          <h3>Projeto Educação Viva</h3>
           <p>Capacitação de jovens em situação de vulnerabilidade social.</p>
-        </article>
-        <article class="card">
-          <h3>Saúde para Todos <span class="badge">Saúde</span></h3>
+        </div>
+        <div class="card">
+          <h3>Saúde para Todos</h3>
           <p>Atendimentos e campanhas de prevenção em comunidades.</p>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="contato" class="card">
+    <section id="contato" class="contact">
       <h2>Contato</h2>
-      <form class="form">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Sua mensagem" rows="4" required></textarea>
-        <button type="submit" class="btn">Enviar</button>
+      <form>
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" required />
+
+        <label for="email">Seu e-mail</label>
+        <input type="email" id="email" required />
+
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 ONG Projeto Solidário — Todos os direitos reservados.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Menu hambúrguer (mobile)
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.primary ul');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG/Projeto – Início</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-
-  <style>
-    /* --- Ajuste da logo e cabeçalho --- */
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo {
-      width: 60px;
-      height: auto;
-      margin-right: 6px;
-    }
-
-    .logo-text {
-      font-size: 0.9rem;
-      color: #0044cc;
-      line-height: 1;
-    }
-  </style>
-</head>
 
 
 
