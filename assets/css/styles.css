@@ -48,10 +48,11 @@ header.site-header {
   align-items: center;
   gap: 8px;
 }
-
 .logo {
-  width: 60px;
+  width: 120px;          /* ajusta o tamanho padrão */
   height: auto;
+  max-height: 80px;      /* impede que ela fique gigante */
+  object-fit: contain;   /* mantém proporção */
 }
 
 .logo-text {
