@@ -46,15 +46,17 @@ header.site-header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: flex-start; /* Ou center se quiser centralizar */
+  gap: 10px;
+  padding: 10px 20px;
 }
 .logo {
-  width: 120px;          /* ajusta o tamanho padrão */
-  height: auto;
-  max-height: 80px;      /* impede que ela fique gigante */
-  object-fit: contain;   /* mantém proporção */
+  width: 120px;          /* Tamanho fixo */
+  height: auto;          /* Mantém proporção */
+  max-width: 100%;       /* Garante que não estoure o container */
+  max-height: 80px;      /* Impede que fique gigante */
+  object-fit: contain;   /* Mantém a imagem proporcional */
 }
-
 .logo-text {
   font-size: 1.25rem;
   font-weight: bold;
