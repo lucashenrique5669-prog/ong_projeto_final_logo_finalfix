@@ -48,53 +48,48 @@ footer.site-footer{text-align:center;padding:1rem 0;margin-top:2rem;border-top:1
 @media(min-width:720px){
   .project-list{grid-template-columns:repeat(2,1fr)}
 }
-/* ===========================
-   MENU HAMBURGUER (MOBILE)
-=========================== */
-.hamburguer {
+/* ==============================
+   MENU RESPONSIVO (ATUAL)
+============================== */
+
+/* Botão do menu (hambúrguer) */
+.menu-toggle {
   display: none;
-  flex-direction: column;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.8rem;
   cursor: pointer;
-  gap: 5px;
 }
 
-.hamburguer span {
-  width: 28px;
-  height: 3px;
-  background-color: var(--cor-clara);
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
+/* Mostrar o botão apenas em telas pequenas */
 @media (max-width: 768px) {
-  .hamburguer {
-    display: flex;
+  .menu-toggle {
+    display: block;
   }
 
-  .nav-links {
+  nav.primary ul {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: var(--cor-primaria);
+    background: var(--bg);
+    border-top: 1px solid var(--border);
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
-    padding: var(--esp-3) 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 10;
   }
 
-  .nav-links.active {
+  nav.primary ul.active {
     display: flex;
   }
 
-  .nav-links li {
+  nav.primary ul li {
     text-align: center;
-    padding: var(--esp-2);
+    margin: 0.5rem 0;
   }
-
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
+}
   /* Animação do botão */
   .hamburguer.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
