@@ -1,58 +1,88 @@
 
-:root{
-  --brand:#0b5cff;
-  --brand-light:#e8f0ff;
-  --text:#222;
-  --muted:#666;
-  --bg:#fff;
-  --border:#dcdcdc;
-  font-family:'Segoe UI', Roboto, Arial, sans-serif;
+/* ================================
+   ESTILO GERAL
+=================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);line-height:1.6;}
-.container{max-width:1100px;margin:0 auto;padding:1rem}
-
-header.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--border)}
-.logo{display:flex;align-items:center;gap:0.5rem}
-.logo img{height:48px;width:auto}
-.logo strong{font-size:1.25rem;color:var(--brand)}
-nav.primary ul{list-style:none;display:flex;gap:1rem;}
-nav.primary a{text-decoration:none;color:var(--text);font-weight:500;padding:0.5rem 0.75rem;border-radius:6px;transition:background .3s;}
-nav.primary a:hover,nav.primary a:focus{background:var(--brand-light);color:var(--brand)}
-
-.hero{background:var(--brand-light);padding:2rem;border-radius:10px;margin-top:1rem;text-align:center}
-.hero h1{color:var(--brand);margin-bottom:0.5rem}
-.hero p{max-width:700px;margin:0 auto}
-
-.card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
-.card h2,h3{color:var(--brand)}
-
-.project-list{display:grid;grid-template-columns:1fr;gap:1rem}
-.project-list img{width:100%;border-radius:6px}
-
-form .form-row{margin-bottom:1rem;display:flex;flex-direction:column}
-label{font-weight:600;margin-bottom:0.25rem}
-input,select,textarea,button{padding:0.6rem;border:1px solid var(--border);border-radius:6px;font-size:1rem}
-input:focus,select:focus,textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px rgba(11,92,255,0.1)}
-button{background:var(--brand);color:#0033cc;cursor:pointer;font-weight:600}
-button:hover{background:#084bcc}
-transform: scale(1.05);
-
-
-.error{border-color:red!important;background:#ffe8e8}
-.success-message{background:#e8ffe8;border:1px solid #b2ffb2;padding:0.75rem;border-radius:6px;margin-top:1rem;color:#225522}
-
-footer.site-footer{text-align:center;padding:1rem 0;margin-top:2rem;border-top:1px solid var(--border);color:var(--muted)}
-
-@media(min-width:720px){
-  .project-list{grid-template-columns:repeat(2,1fr)}
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --brand: #0077cc;
+  --brand-light: #e6f2ff;
+  --border: #cccccc;
 }
-/* ==============================
-   MENU RESPONSIVO (ATUAL)
-============================== */
 
-/* Botão do menu (hambúrguer) */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ================================
+   CONTAINER GERAL
+=================================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ================================
+   CABEÇALHO E MENU
+=================================== */
+header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--brand);
+}
+
+/* --- Menu principal --- */
+nav.primary ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav.primary a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav.primary a:hover,
+nav.primary a:focus {
+  background: var(--brand-light);
+  color: var(--brand);
+}
+
+/* --- Botão de menu (visível no mobile) --- */
 .menu-toggle {
   display: none;
   background: none;
@@ -62,7 +92,7 @@ footer.site-footer{text-align:center;padding:1rem 0;margin-top:2rem;border-top:1
   cursor: pointer;
 }
 
-/* Mostrar o botão apenas em telas pequenas */
+/* --- Responsivo --- */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -78,61 +108,146 @@ footer.site-footer{text-align:center;padding:1rem 0;margin-top:2rem;border-top:1
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    z-index: 10;
   }
 
   nav.primary ul.active {
     display: flex;
   }
 
-  nav.primary ul li {
+  nav.primary li {
     text-align: center;
     margin: 0.5rem 0;
   }
 }
-  /* Animação do botão */
-  .hamburguer.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .hamburguer.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburguer.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
+
+/* ================================
+   SEÇÕES PRINCIPAIS
+=================================== */
+.hero {
+  background: var(--brand-light);
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-/* ===========================
-   FORMULÁRIO
-=========================== */
-.form {
+.hero h1 {
+  color: var(--brand);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+/* --- Seção sobre --- */
+.about {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Projetos --- */
+.projects {
+  background: #f9f9f9;
+  padding: 2rem 1rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Contato --- */
+.contact {
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  gap: var(--esp-2);
+  gap: 1rem;
 }
 
-input, textarea {
-  padding: var(--esp-2);
-  border: 1px solid var(--cor-neutra);
-  border-radius: 8px;
+label {
+  font-weight: 500;
+}
+
+input,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
   font-size: 1rem;
+  width: 100%;
 }
 
-input:focus, textarea:focus {
-  border-color: var(--cor-secundaria);
-  outline: none;
+button[type="submit"] {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
+button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+/* ================================
+   RODAPÉ
+=================================== */
 footer {
-  background-color: var(--cor-primaria);
-  color: var(--cor-clara);
   text-align: center;
-  padding: var(--esp-3);
-  margin-top: var(--esp-4);
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  color: #666;
 }
-/* Responsividade */
-@media (max-width: 1200px) { /* notebook */ }
-@media (max-width: 992px) { /* tablet horizontal */ }
-@media (max-width: 768px) { /* tablet vertical */ }
-@media (max-width: 576px) { /* celular grande */ }
-@media (max-width: 400px) { /* celular pequeno */ }
+
