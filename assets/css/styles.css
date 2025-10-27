@@ -35,8 +35,10 @@ form .form-row{margin-bottom:1rem;display:flex;flex-direction:column}
 label{font-weight:600;margin-bottom:0.25rem}
 input,select,textarea,button{padding:0.6rem;border:1px solid var(--border);border-radius:6px;font-size:1rem}
 input:focus,select:focus,textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px rgba(11,92,255,0.1)}
-button{background:var(--brand);color:#fff;cursor:pointer;font-weight:600}
+button{background:var(--brand);color:#0033cc;cursor:pointer;font-weight:600}
 button:hover{background:#084bcc}
+transform: scale(1.05);
+
 
 .error{border-color:red!important;background:#ffe8e8}
 .success-message{background:#e8ffe8;border:1px solid #b2ffb2;padding:0.75rem;border-radius:6px;margin-top:1rem;color:#225522}
