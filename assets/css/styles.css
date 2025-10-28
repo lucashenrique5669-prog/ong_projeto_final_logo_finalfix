@@ -1,256 +1,236 @@
 
-/* ================================
-   ESTILO GERAL
-=================================== */
+/* ------------------------------
+   RESET E BASE
+--------------------------------*/
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --bg: #ffffff;
-  --text: #333333;
-  --brand: #0077cc;
-  --brand-light: #e6f2ff;
-  --border: #cccccc;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
   line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
 }
 
-/* ================================
-   CONTAINER GERAL
-=================================== */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* ================================
-   CABEÇALHO E MENU
-=================================== */
-header.site-header {
+/* ------------------------------
+   CABEÇALHO
+--------------------------------*/
+header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Ou center se quiser centralizar */
-  gap: 10px;
-  padding: 10px 20px;
-}
-.logo {
-  width: 120px;          /* Tamanho fixo */
-  height: auto;          /* Mantém proporção */
-  max-width: 100%;       /* Garante que não estoure o container */
-  max-height: 80px;      /* Impede que fique gigante */
-  object-fit: contain;   /* Mantém a imagem proporcional */
-}
-.logo-text {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: var(--brand);
+  gap: 8px;
 }
 
-/* --- Menu principal --- */
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+/* ------------------------------
+   MENU PRINCIPAL
+--------------------------------*/
 nav.primary ul {
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  list-style: none;
+  gap: 25px;
 }
 
 nav.primary a {
   text-decoration: none;
-  color: var(--text);
+  color: #333;
   font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+  transition: color 0.3s;
 }
 
-nav.primary a:hover,
-nav.primary a:focus {
-  background: var(--brand-light);
-  color: var(--brand);
+nav.primary a:hover {
+  color: #007bff;
 }
 
-/* --- Botão de menu (visível no mobile) --- */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* --- Responsivo --- */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav.primary ul {
-    display: none;
-    flex-direction: column;
-    background: var(--bg);
-    border-top: 1px solid var(--border);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  nav.primary ul.active {
-    display: flex;
-  }
-
-  nav.primary li {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-}
-
-/* ================================
-   SEÇÕES PRINCIPAIS
-=================================== */
+/* ------------------------------
+   SEÇÃO HERO (INÍCIO)
+--------------------------------*/
 .hero {
-  background: var(--brand-light);
-  padding: 3rem 1rem;
-  border-radius: 10px;
+  background-color: #e9f2ff;
   text-align: center;
-  margin-top: 1.5rem;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  color: var(--brand);
-  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  color: #0056b3;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 0 auto 1rem;
+  color: #333;
+  margin-bottom: 25px;
 }
 
+/* BOTÃO PRINCIPAL */
 .btn-primary {
-  background: var(--brand);
-  color: white;
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .btn-primary:hover {
-  background: #005fa3;
+  background-color: #0056b3;
 }
 
-/* --- Seção sobre --- */
+/* ------------------------------
+   SOBRE
+--------------------------------*/
 .about {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .about h2 {
-  color: var(--brand);
-  margin-bottom: 0.5rem;
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
-/* --- Projetos --- */
+/* ------------------------------
+   PROJETOS
+--------------------------------*/
 .projects {
-  background: #f9f9f9;
-  padding: 2rem 1rem;
+  background: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 30px;
 }
 
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
-  color: var(--brand);
-  margin-bottom: 0.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
-/* --- Contato --- */
+/* ------------------------------
+   CONTATO
+--------------------------------*/
 .contact {
-  padding: 2rem 1rem;
-  max-width: 700px;
-  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .contact h2 {
-  text-align: center;
-  color: var(--brand);
-  margin-bottom: 1rem;
+  color: #0056b3;
+  margin-bottom: 25px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 label {
-  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 input,
 textarea {
-  padding: 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 1rem;
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 button[type="submit"] {
-  background: var(--brand);
-  color: white;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  padding: 0.75rem;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background: #005fa3;
+  background-color: #0056b3;
 }
 
-/* ================================
+/* ------------------------------
    RODAPÉ
-=================================== */
+--------------------------------*/
 footer {
   text-align: center;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-  margin-top: 2rem;
-  color: #666;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+--------------------------------*/
+@media (max-width: 768px) {
+  nav.primary ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
 
